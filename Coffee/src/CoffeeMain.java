@@ -1,4 +1,4 @@
-package View;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -10,9 +10,6 @@ import java.io.IOException;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import Design.RoundedButton;
-
 import javax.swing.JTextField;
 import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
@@ -56,7 +53,7 @@ public class CoffeeMain extends JFrame {
 		contentPane.setLayout(null);
 		
 		
-		JLabel label = new JLabel("\uC5BC\uC8FD\uC544");
+		JLabel label = new JLabel("Ä¿ÇÇ»¡");
 		label.setBounds(161, 61, 321, 70);
 		Font bold_ac = new Font("¸¼Àº °íµñ",Font.BOLD,60);
 		label.setForeground(new Color(79,79,79));///Á¦¸ñ ÆùÆ®»ö

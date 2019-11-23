@@ -1,4 +1,4 @@
-package View;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -7,14 +7,13 @@ import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import Design.RoundedButton;
-
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
 import javax.swing.Action;
+
+
 
 public class ExpectiedTime extends JFrame {
 
@@ -52,7 +51,7 @@ public class ExpectiedTime extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
+		JLabel lblNewLabel = new JLabel("order()");
 		lblNewLabel.setBounds(93, 61, 217, 70);
 		lblNewLabel.setFont(font_bold);
 		lblNewLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -81,8 +80,8 @@ public class ExpectiedTime extends JFrame {
 		lblNewLabel_3.setBackground(new Color(180,143,193));
 		lblNewLabel_3.setHorizontalAlignment(JLabel.CENTER);
 		contentPane.add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_4 = new JLabel("New label");
+		//int time1 = scheduling.order();
+		JLabel lblNewLabel_4 = new JLabel();
 		lblNewLabel_4.setBounds(323, 155, 209, 30);
 		lblNewLabel_4.setFont(font_plain);
 		lblNewLabel_4.setHorizontalAlignment(JLabel.CENTER);

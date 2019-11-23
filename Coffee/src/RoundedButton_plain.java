@@ -1,4 +1,4 @@
-package Design;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
@@ -11,24 +11,24 @@ import javax.swing.Action;
 import javax.swing.Icon;
 import javax.swing.JButton;
 
-public class RoundedButton extends JButton { 
-	public RoundedButton() {
+public class RoundedButton_plain extends JButton { 
+	public RoundedButton_plain() {
 		super(); 
 		decorate();
 		} 
-	public RoundedButton(String text) {
+	public RoundedButton_plain(String text) {
 		super(text);
 		 decorate();
 		}
-	public RoundedButton(Action action) {
+	public RoundedButton_plain(Action action) {
 		super(action);
 		 decorate();
 		}
-	public RoundedButton(Icon icon) {
+	public RoundedButton_plain(Icon icon) {
 		super(icon);
 		 decorate();
 		}
-	public RoundedButton(String text, Icon icon) {
+	public RoundedButton_plain(String text, Icon icon) {
 		super(text, icon); 
 		 decorate();
 		}
@@ -38,17 +38,18 @@ public class RoundedButton extends JButton {
 		}
 	
 	@Override protected void paintComponent(Graphics g) {
-		Font bold_ac = new Font("¸¼Àº °íµñ",Font.BOLD,25);
+		Font basic_ac = new Font("¸¼Àº °íµñ",Font.PLAIN,20);////ÆùÆ® ¹Ù²ß½Ã´Ù
+		
 				
 		int width = getWidth();
 		int height = getHeight();
 		
-		g.setFont(bold_ac);
-		
-		g.setColor(new Color(224,184,192));
+		g.setFont(basic_ac);
+
+		g.setColor(new Color(224,184,192));//¹öÆ°»ö
 		Graphics2D graphics = (Graphics2D) g;
 		graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-	
+		
 		if (getModel().isArmed()) {
 			graphics.setColor(graphics.getColor().darker());
 			} else if (getModel().isRollover()) {
@@ -65,7 +66,6 @@ public class RoundedButton extends JButton {
 		int textY = (height - stringBounds.height) / 2 + fontMetrics.getAscent();
 		
 		graphics.setColor(getForeground());
-		//graphics.setFont(getFont());
 		graphics.drawString(getText(), textX, textY);
 		graphics.dispose();
 		g.dispose();
