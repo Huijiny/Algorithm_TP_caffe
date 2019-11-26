@@ -3,6 +3,8 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -55,6 +57,17 @@ public class Complete extends JFrame {
 		
 		RoundedButton btnNewButton = new RoundedButton("첫 페이지로");
 		btnNewButton.setBounds(161, 185, 314, 156);
+		btnNewButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				CoffeeMain cm = new CoffeeMain();
+				cm.setVisible(true);
+				setVisible(false);
+			}
+			
+		});
 		contentPane.add(btnNewButton);
 	}
 

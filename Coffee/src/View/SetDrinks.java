@@ -3,6 +3,8 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -12,6 +14,7 @@ import Design.RoundedButton;
 import Design.RoundedButton_plain;
 
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class SetDrinks extends JFrame {
@@ -56,8 +59,21 @@ public class SetDrinks extends JFrame {
 		lblNewLabel.setHorizontalAlignment(JLabel.CENTER);
 		contentPane.add(lblNewLabel);
 		
+		
+		
 		RoundedButton btnNewButton = new RoundedButton("선택");
 		btnNewButton.setBounds(475, 383, 119, 41);
+		btnNewButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ExpectiedTime et = new ExpectiedTime();
+				et.setVisible(true);
+				setVisible(false);
+			}
+			
+		});
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel_1 = new JLabel("아메리카노");
@@ -101,5 +117,21 @@ public class SetDrinks extends JFrame {
 		RoundedButton_plain btnNewButton_6 = new RoundedButton_plain("ICE");
 		btnNewButton_6.setBounds(388, 248, 100, 30);
 		contentPane.add(btnNewButton_6);
+		
+		
+		JLabel lblNewLabel_4 = new JLabel();
+		lblNewLabel_4.setBounds(0,0,644,227);
+		ImageIcon image = new ImageIcon("C:\\Alg_TP\\Coffee\\2.png");
+		lblNewLabel_4 .setIcon(image);
+		contentPane.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel();
+		lblNewLabel_5.setBounds(14, 388, 72, 77);
+		ImageIcon image2 = new ImageIcon("C:\\Alg_TP\\Coffee\\sign (1).png");
+		lblNewLabel_5.setIcon(image2);
+		contentPane.add(lblNewLabel_5);
+		
+		setVisible(true);
+		setResizable(false);
 	}
 }

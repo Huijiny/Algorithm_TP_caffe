@@ -1,9 +1,13 @@
 package View;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
@@ -46,7 +50,7 @@ public class CoffeeMain extends JFrame {
 	 * Create the frame.
 	 */
 	public CoffeeMain() {
-		Image img=null;
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 300, 650, 500);
 		contentPane = new JPanel();
@@ -55,19 +59,44 @@ public class CoffeeMain extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		
-		JLabel label = new JLabel("\uC5BC\uC8FD\uC544");
-		label.setBounds(161, 61, 321, 70);
+		ImageIcon title = new ImageIcon("C:\\Alg_TP\\Coffee\\title.png");
+		JLabel label = new JLabel(title);
+		label.setBounds(124, 0, 428, 304);
 		Font bold_ac = new Font("맑은 고딕",Font.BOLD,60);
 		label.setForeground(new Color(79,79,79));///제목 폰트색
 		label.setFont(bold_ac);
-	
 		label.setHorizontalAlignment(JLabel.CENTER);
-		contentPane.add(label);
 		
-		RoundedButton btnNewButton = new RoundedButton("\uB0B4 \uC8FC\uBCC0\uC73C\uB85C \uC2DC\uC791");
-		btnNewButton.setBounds(161, 185, 314, 156);
+		ImageIcon image = new ImageIcon("C:\\Alg_TP\\Coffee\\1.png");
+		JLabel labelImage = new JLabel();
+		labelImage.setIcon(image);
+		labelImage.setBounds(0,0,632,453);
+		contentPane.add(label);
+		contentPane.add(labelImage);
+		
+		RoundedButton btnNewButton = new RoundedButton("내 주변으로 시작");
+		btnNewButton.setBounds(161, 252, 314, 89);
 		btnNewButton.setFont(bold_ac);
+		btnNewButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				SetDrinks sd = new SetDrinks();
+				
+				sd.setVisible(true);
+				setVisible(false);
+			}
+			
+		});
 		contentPane.add(btnNewButton);
+		
+		ImageIcon image2 = new ImageIcon("C:\\Alg_TP\\Coffee\\cafe.png");
+		JLabel lblNewLabel = new JLabel(image2);
+		lblNewLabel.setBounds(397, 181,100, 70);
+		contentPane.add(lblNewLabel);
+		setVisible(true);
+		setResizable(true);
 	}
-}
+	}
+
