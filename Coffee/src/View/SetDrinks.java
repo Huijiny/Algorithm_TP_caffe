@@ -1,4 +1,4 @@
-
+package View;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -7,6 +7,10 @@ import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Design.RoundedButton;
+import Design.RoundedButton_plain;
+
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
