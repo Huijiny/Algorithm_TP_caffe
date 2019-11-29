@@ -13,6 +13,7 @@ import javax.swing.border.EmptyBorder;
 import Design.RoundedButton;
 
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class Complete extends JFrame {
@@ -40,23 +41,32 @@ public class Complete extends JFrame {
 	 */
 	public Complete() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(300, 300, 650, 500);
+		setBounds(300, 300, 850, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setBackground(new Color(242,238,229));///배경색
+		contentPane.setBackground(new Color(255,215,1));///배경색
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("주문 완료");
-		lblNewLabel.setBounds(161, 61, 321, 70);
-		Font bold_ac = new Font("맑은 고딕",Font.BOLD,50);
-		lblNewLabel.setForeground(new Color(79,79,79));///제목 폰트색
-		lblNewLabel.setFont(bold_ac);
-		lblNewLabel.setHorizontalAlignment(JLabel.CENTER);
+		ImageIcon comple = new ImageIcon("C:\\Alg_TP\\Coffee\\ordercomple.png");
+		JLabel lblNewLabel = new JLabel(comple);
+		lblNewLabel.setBounds(108, 106, 615, 118);
 		contentPane.add(lblNewLabel);
 		
-		RoundedButton btnNewButton = new RoundedButton("첫 페이지로");
-		btnNewButton.setBounds(161, 185, 314, 156);
+
+		ImageIcon kakaof = new ImageIcon("C:\\Alg_TP\\Coffee\\Kakaofriends.png");
+		JLabel kakao = new JLabel(kakaof);
+		kakao.setBounds(246, 265, 327, 125);
+		contentPane.add(kakao);
+		
+		ImageIcon gobacknor = new ImageIcon("C:\\Alg_TP\\Coffee\\gobacknor.png");
+		ImageIcon gobackroll = new ImageIcon("C:\\Alg_TP\\Coffee\\gobackroll.png");
+		ImageIcon gobackpre = new ImageIcon("C:\\Alg_TP\\Coffee\\gobackpre.png");
+		JButton btnNewButton = new JButton(gobacknor);
+		btnNewButton.setRolloverIcon(gobackroll);
+		btnNewButton.setPressedIcon(gobackpre);
+		btnNewButton.setBorderPainted(false);
+		btnNewButton.setBounds(209, 403, 400, 80);
 		btnNewButton.addActionListener(new ActionListener() {
 
 			@Override
@@ -65,6 +75,7 @@ public class Complete extends JFrame {
 				CoffeeMain cm = new CoffeeMain();
 				cm.setVisible(true);
 				setVisible(false);
+				
 			}
 			
 		});
