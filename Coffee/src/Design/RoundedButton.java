@@ -38,21 +38,21 @@ public class RoundedButton extends JButton {
 		}
 	
 	@Override protected void paintComponent(Graphics g) {
-		Font bold_ac = new Font("¸¼Àº °íµñ",Font.BOLD,25);
+		Font bold_ac = new Font("¸¼Àº °íµñ",Font.BOLD,32);
 				
 		int width = getWidth();
 		int height = getHeight();
 		
 		g.setFont(bold_ac);
 		
-		g.setColor(new Color(224,184,192));
+		g.setColor(new Color(242,242,242));
 		Graphics2D graphics = (Graphics2D) g;
 		graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 	
 		if (getModel().isArmed()) {
 			graphics.setColor(graphics.getColor().darker());
 			} else if (getModel().isRollover()) {
-				graphics.setColor(new Color(210,123,157));
+				graphics.setColor(new Color(217,217,217));
 				} else {
 					graphics.setColor(graphics.getColor());
 					}
