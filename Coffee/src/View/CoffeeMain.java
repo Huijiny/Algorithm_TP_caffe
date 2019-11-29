@@ -52,31 +52,33 @@ public class CoffeeMain extends JFrame {
 	public CoffeeMain() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(300, 300, 650, 500);
+		setBounds(300, 300, 850, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setBackground(new Color(242,238,229));///배경색///235,235,235는 너무 기본색 같나요? 신문지같은 느낌 주고싶었는데, 너무 기본색같기도 해서요.
+		contentPane.setBackground(new Color(255,215,1));///배경색///235,235,235는 너무 기본색 같나요? 신문지같은 느낌 주고싶었는데, 너무 기본색같기도 해서요.
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		ImageIcon title = new ImageIcon("C:\\Alg_TP\\Coffee\\title.png");
 		JLabel label = new JLabel(title);
-		label.setBounds(124, 0, 428, 304);
+		label.setBounds(210, 66, 428, 304);
 		Font bold_ac = new Font("맑은 고딕",Font.BOLD,60);
 		label.setForeground(new Color(79,79,79));///제목 폰트색
 		label.setFont(bold_ac);
 		label.setHorizontalAlignment(JLabel.CENTER);
 		
 		ImageIcon image = new ImageIcon("C:\\Alg_TP\\Coffee\\1.png");
-		JLabel labelImage = new JLabel();
-		labelImage.setIcon(image);
-		labelImage.setBounds(0,0,632,453);
 		contentPane.add(label);
-		contentPane.add(labelImage);
 		
-		RoundedButton btnNewButton = new RoundedButton("내 주변으로 시작");
-		btnNewButton.setBounds(161, 252, 314, 89);
-		btnNewButton.setFont(bold_ac);
+		ImageIcon startBtn = new ImageIcon("C:\\Alg_TP\\Coffee\\startBtn.png");
+		ImageIcon rolloverIcon = new ImageIcon("C:\\Alg_TP\\Coffee\\pressedBtnTitle.png");
+		ImageIcon pressedIcon = new ImageIcon("C:\\Alg_TP\\Coffee\\rolloverBtnTitle.png");
+		JButton btnNewButton = new JButton(startBtn);
+		btnNewButton.setBorderPainted(false);
+		btnNewButton.setBorder(new RoundedBorder(10));
+		btnNewButton.setBounds(196, 377, 454, 86);
+		btnNewButton.setPressedIcon(pressedIcon);
+		btnNewButton.setRolloverIcon(rolloverIcon);
 		btnNewButton.addActionListener(new ActionListener() {
 
 			@Override
