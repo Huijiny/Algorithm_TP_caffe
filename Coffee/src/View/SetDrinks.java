@@ -46,23 +46,27 @@ public class SetDrinks extends JFrame {
 		Font font_bold = new Font("맑은 고딕",Font.BOLD,25);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(300, 300, 650, 500);
+		setBounds(300, 300, 950, 700);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setBackground(new Color(242,238,229));///배경색
+		contentPane.setBackground(new Color(255,215,1));///배경색
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("음료 정하기");
-		lblNewLabel.setBounds(161, 61, 321, 70);
-		lblNewLabel.setFont(font_bold);
-		lblNewLabel.setHorizontalAlignment(JLabel.CENTER);
+		ImageIcon title = new ImageIcon("C:\\Alg_TP\\Coffee\\setDrinkTitle.png");
+		JLabel lblNewLabel = new JLabel(title);
+		lblNewLabel.setBounds(338, 75, 408, 129);
 		contentPane.add(lblNewLabel);
 		
 		
-		
-		RoundedButton btnNewButton = new RoundedButton("선택");
-		btnNewButton.setBounds(475, 383, 119, 41);
+		ImageIcon choosenor = new ImageIcon("C:\\Alg_TP\\Coffee\\choosenor.png");
+		ImageIcon chooseroll = new ImageIcon("C:\\Alg_TP\\Coffee\\chooseroll.png");
+		ImageIcon choosepre = new ImageIcon("C:\\Alg_TP\\Coffee\\choosepre.png");
+		JButton btnNewButton = new JButton(choosenor);
+		btnNewButton.setBorderPainted(false);
+		btnNewButton.setRolloverIcon(chooseroll);
+		btnNewButton.setPressedIcon(choosepre);
+		btnNewButton.setBounds(690, 536, 189, 60);
 		btnNewButton.addActionListener(new ActionListener() {
 
 			@Override
@@ -76,60 +80,151 @@ public class SetDrinks extends JFrame {
 		});
 		contentPane.add(btnNewButton);
 		
-		JLabel lblNewLabel_1 = new JLabel("아메리카노");
-		lblNewLabel_1.setBounds(144, 148, 120, 34);
-		lblNewLabel_1.setFont(font_plain);
-		lblNewLabel_1.setHorizontalAlignment(JLabel.CENTER);
-		contentPane.add(lblNewLabel_1);
+		//ImageIcon ame = new ImageIcon("C:\\Alg_TP\\Coffee\\ame.png");
+		JLabel ame = new JLabel( new ImageIcon("C:\\Alg_TP\\Coffee\\menu.png"));
+		ame.setBounds(271, 220, 181, 252);
+		contentPane.add(ame);
 		
-		JLabel lblNewLabel_2 = new JLabel("카페라떼");
-		lblNewLabel_2.setBounds(144, 198, 120, 34);
-		lblNewLabel_2.setFont(font_plain);
-		lblNewLabel_2.setHorizontalAlignment(JLabel.CENTER);
-		contentPane.add(lblNewLabel_2);
+		RoundedButton ameHot = new RoundedButton("HOT");
+		ameHot.setBounds(466, 257, 100, 35);
+		ameHot.setBorderPainted(false);
+		ameHot.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				//여기서 setText(아메리카노Hot 해주세요)
+			}
+			
+		});
+		contentPane.add(ameHot);
 		
-		JLabel lblNewLabel_3 = new JLabel("카푸치노");
-		lblNewLabel_3.setBounds(144, 248, 120, 34);
-		lblNewLabel_3.setFont(font_plain);
-		lblNewLabel_3.setHorizontalAlignment(JLabel.CENTER);
-		contentPane.add(lblNewLabel_3);
+		RoundedButton ameice = new RoundedButton("ICE");
+		ameice.setBorderPainted(false);
+		ameice.setBounds(586, 257, 100, 35);
+		ameice.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				//여기서 setText(아메리카노Hot 해주세요)
+			}
+			
+		});
+		contentPane.add(ameice);
 		
-		RoundedButton_plain btnNewButton_1 = new RoundedButton_plain("HOT");
-		btnNewButton_1.setBounds(284, 148, 100, 30);
-		contentPane.add(btnNewButton_1);
+		RoundedButton latteHot = new RoundedButton("HOT");
+		latteHot.setBorderPainted(false);
+		latteHot.setBounds(466, 310, 100, 35);
+		latteHot.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				//여기서 setText(아메리카노Hot 해주세요)
+			}
+			
+		});
+		contentPane.add(latteHot);
 		
-		RoundedButton_plain btnNewButton_2 = new RoundedButton_plain("ICE");
-		btnNewButton_2.setBounds(388, 148, 100, 30);
-		contentPane.add(btnNewButton_2);
+		RoundedButton latteice =  new RoundedButton("ICE");
+		latteice.setBorderPainted(false);
+		latteice.setBounds(586, 310, 100, 35);
+		latteice.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				//여기서 setText(아메리카노Hot 해주세요)
+			}
+			
+		});
+		contentPane.add(latteice);
 		
-		RoundedButton_plain btnNewButton_3 = new RoundedButton_plain("HOT");
-		btnNewButton_3.setBounds(284, 198, 100, 30);
-		contentPane.add(btnNewButton_3);
+		RoundedButton mocaHot = new RoundedButton("HOT");
+		mocaHot.setBorderPainted(false);
+		mocaHot.setBounds(466, 360, 100, 35);
+		mocaHot.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				//여기서 setText(아메리카노Hot 해주세요)
+			}
+			
+		});
+		contentPane.add(mocaHot);
 		
-		RoundedButton_plain btnNewButton_4 = new RoundedButton_plain("ICE");
-		btnNewButton_4.setBounds(388, 198, 100, 30);
-		contentPane.add(btnNewButton_4);
+		RoundedButton mocaice= new RoundedButton("ICE");
+		mocaice.setBorderPainted(false);
+		mocaice.setBounds(586, 360, 100, 35);
+		mocaice.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				//여기서 setText(아메리카노Hot 해주세요)
+			}
+			
+		});
+		contentPane.add( mocaice);
 		
-		RoundedButton_plain btnNewButton_5 = new RoundedButton_plain("HOT");
-		btnNewButton_5.setBounds(284, 248, 100, 30);
-		contentPane.add(btnNewButton_5);
+		RoundedButton vanilHot = new RoundedButton("HOT");
+		vanilHot.setBorderPainted(false);
+		vanilHot.setBounds(466, 410, 100, 35);
+		vanilHot.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				//여기서 setText(아메리카노Hot 해주세요)
+			}
+			
+		});
+		contentPane.add(vanilHot);
 		
-		RoundedButton_plain btnNewButton_6 = new RoundedButton_plain("ICE");
-		btnNewButton_6.setBounds(388, 248, 100, 30);
-		contentPane.add(btnNewButton_6);
+		RoundedButton vanilIce = new RoundedButton("ICE");
+		vanilIce.setBorderPainted(false);
+		vanilIce.setBounds(586, 410, 100, 35);
+		vanilIce.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				//여기서 setText(아메리카노Hot 해주세요)
+			}
+			
+		});
+		contentPane.add(vanilIce);
 		
 		
 		JLabel lblNewLabel_4 = new JLabel();
-		lblNewLabel_4.setBounds(0,0,644,227);
-		ImageIcon image = new ImageIcon("C:\\Alg_TP\\Coffee\\2.png");
+		lblNewLabel_4.setBounds(110,201,740,4);
+		ImageIcon image = new ImageIcon("C:\\Alg_TP\\Coffee\\line.png");
 		lblNewLabel_4 .setIcon(image);
 		contentPane.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel();
-		lblNewLabel_5.setBounds(14, 388, 72, 77);
-		ImageIcon image2 = new ImageIcon("C:\\Alg_TP\\Coffee\\sign (1).png");
-		lblNewLabel_5.setIcon(image2);
+		ImageIcon kakaof = new ImageIcon("C:\\Alg_TP\\Coffee\\kakaofriends.png");
+		JLabel lblNewLabel_5 = new JLabel(kakaof);
+		lblNewLabel_5.setBounds(0, 536, 299, 129);
 		contentPane.add(lblNewLabel_5);
+		
+		ImageIcon back = new ImageIcon("C:\\Alg_TP\\Coffee\\backBtn.png");
+		JButton btnNewButton_1 = new JButton(back);
+		btnNewButton_1.setBounds(14, 12, 80, 75);
+		btnNewButton_1.setBorderPainted(false);
+		btnNewButton_1.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				CoffeeMain cm = new CoffeeMain();
+				cm.setVisible(true);
+				setVisible(false);
+			}
+			
+		});
+		contentPane.add(btnNewButton_1);
 		
 		setVisible(true);
 		setResizable(false);
